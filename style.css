@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* navbar css start */
+.navbar{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+margin-top: 35px;
+}
+.navbar a{
+    font-size: 30px;
+}
+.navbar input{
+    height: 35px;
+    /* width: 65px; */
+}
+
+.group1{
+    display: flex;
+    gap: 25px;
+}
+.group2{
+    display: flex;
+    gap: 25px;
+}
+.login{
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.signup{
+    background-color: #0d0c22;
+    color: white;
+    padding: 5px;
+    border-radius: 40px;
+    width: 90px;
+}
+.searchbar{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.searchbar input{
+    outline: none;
+    border: none;
+}
+/* navbar css end */
+/* hero css start */
+.hero{
+    height: 80vh;
+    width: 100%;
+    /* background-color: yellowgreen; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.hero h1{
+    font-size: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 1;
+}
+.hero p{
+    font-size: 1.5vw;
+    text-align: center;
+}
+/* bigsearch css start */
+.bigsearch{
+    width: 500px;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    /* background-color: red; */
+    padding-left: 10px;
+}
+.bigsearch i{
+    font-size: 30px;
+
+}
+.bigsearch input{
+    width: 500px;
+    height: 90%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+/* bigsearch css end */
+/* tranding css start */
+.tranding{
+    height: 50px;
+    width: 60%;
+    /* background-color: red; */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.tranding h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+.tranding a{
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #bebebe;
+}
+.tranding a:hover{
+    border-color: #deb6b6;
+}
+/* tranding css end */
+/* hero css end */
+/* card css start */
+.card{
+    position: relative;
+}
+.cardwrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+.imgwrapper{
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-radius: 30px;
+}
+.imgwrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* card css end */
+.hoverBox{
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(rgb(205, 202, 202),rgb(184, 182, 182));
+    position: absolute;
+    bottom: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* display: none; */
+    opacity: 0;
+    transition: all ease 3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.card:hover .hoverBox{
+    opacity: 1;
+}
+.grp11{
+    font-size: 20px;
+    /* font-family: ; */
+}
+.grp12{
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+/* new modification 2 start */
+@media screen and (max-width: 1000px) {
+    body{
+        background-color: white;
+    }
+
+    .navbar>a{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .group1,.searchbar{
+        display: none;
+    }
+
+    .hero {
+        width: 100%;
+        /* background-color: yellow; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 8vw; /* Adjusted font size */
+        margin: 0;
+        /* background-color: pink; Background color if needed */
+    }
+
+    .hero p {
+        font-size: 4vw;
+        width: 90%; /* Ensures text doesn't stretch too wide */
+    }
+
+    .bigsearch {
+        width: 90%;
+        max-width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tranding {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10;
+        /* margin-bottom: 20px; */
+    }
+
+    .tranding h3 {
+        font-size: 18px; /* Adjust font size for heading */
+    }
+
+    .tranding a {
+        padding: 10px 20px;
+        border: 1px solid #bebebe;
+        border-radius: 20px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .tranding a:hover {
+        border-color: #deb6b6;
+    }
+
+    .cardwrapper {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        margin-top: 80px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* new modification 2 end */
